@@ -14,11 +14,16 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
+    public User loadUserByEmail(String email) {
+        return userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException());
+    }
+
     @Transactional
-    public User findOrCreateUser(User user) {
+    public User findOrCreateUser(String email) {
         try {
-            return userRepository.findByEmail(user.getEmail())
-                    .orElseGet(() -> userRepository.save(user));
+            return userRepository.findByEmail(email)
+                    .orElseGet(() -> userRepository.save(new User(email)));
         } catch(DataIntegrityViolationException ex) {
             throw new RuntimeException("Data constrain violation while save user.");
         }
