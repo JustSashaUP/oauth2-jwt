@@ -1,8 +1,6 @@
 package com.sample.auth.module;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import org.hibernate.annotations.UuidGenerator;
 
 import java.util.UUID;
@@ -14,20 +12,29 @@ public class User {
         @UuidGenerator
         private UUID id;
         private String email;
-        private String name;
-        private String profilePicture;
+        private String fullName;
+        private String profilePictureUrl;
 
         private Provider provider;
         private String providerId;
 
+        @Enumerated(EnumType.STRING)
+        private Role role;
+
         public User() {}
 
-        public User(String email, String name, String profilePicture, Provider provider, String providerId) {
+        public User(String email) {
                 this.email = email;
-                this.name = name;
-                this.profilePicture = profilePicture;
+        }
+
+        public User(String email, String fullName, String profilePictureUrl,
+                    Provider provider, String providerId, Role role) {
+                this.email = email;
+                this.fullName = fullName;
+                this.profilePictureUrl = profilePictureUrl;
                 this.provider = provider;
                 this.providerId = providerId;
+                this.role = role;
         }
 
         public UUID getId() {
@@ -38,24 +45,36 @@ public class User {
                 this.id = id;
         }
 
-        public void setName(String name) {
-                this.name = name;
+        public String getFullName() {
+                return fullName;
+        }
+
+        public void setFullName(String fullName) {
+                this.fullName = fullName;
         }
 
         public String getEmail() {
                 return email;
         }
 
-        public void setProfilePicture(String profilePicture) {
-                this.profilePicture = profilePicture;
+        public String getProfilePictureUrl() {
+                return profilePictureUrl;
+        }
+
+        public void setProfilePictureUrl(String profilePictureUrl) {
+                this.profilePictureUrl = profilePictureUrl;
+        }
+
+        public Role getRole() {
+                return role;
         }
 
         @Override
         public String toString() {
                 return "User{" +
                         "email='" + email + '\'' +
-                        ", name='" + name + '\'' +
-                        ", profilePicture='" + profilePicture + '\'' +
+                        ", name='" + fullName + '\'' +
+                        ", pictureUrl='" + profilePictureUrl + '\'' +
                         ", provider=" + provider +
                         ", providerId='" + providerId + '\'' +
                         '}';
