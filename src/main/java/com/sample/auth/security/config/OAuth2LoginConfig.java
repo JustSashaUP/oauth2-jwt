@@ -30,7 +30,7 @@ public class OAuth2LoginConfig {
     @Bean
     public SecurityFilterChain oauthLoginFilterChain(HttpSecurity http) throws Exception{
         http
-                .securityMatcher("/oauth2/**")
+                .securityMatcher("/oauth2/**", "/login/**")
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .csrf(csrf -> csrf.disable())
