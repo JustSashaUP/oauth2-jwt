@@ -30,4 +30,8 @@ public class UserPrincipal implements UserDetails {
     public String getUsername() {
         return null;
     }
+
+    public User getUser() {
+        return user;
+    }
 }
