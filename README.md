@@ -35,7 +35,7 @@ GOOGLE_CLIENT_SECRET=<secret_key>
 ```
 ## 4. Generate the JWT secret key
 ```
-mvn test -Dtest=JwtKeyGenTest
+mvn test -Dtest=JwtSecretKeyGenTest
 ```
 Copy: 
 ```
