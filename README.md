@@ -41,7 +41,6 @@ Copy:
 ```
 JWT_SECRET_KEY=<generated_secret_key>
 ```
----
 ## 5. Run with Docker
 ```
 docker compose up --build -d
@@ -50,3 +49,32 @@ Host:
 ```
 http://localhost:8080
 ```
+---
+## 🔗 Useful Links from me
+
+### 🔐 Spring Security — OAuth2 / OIDC (Login Only)
+
+- 💡 How FilterChain works (my notes)  
+  https://www.linkedin.com/posts/oleksandr-savchenko-08213924a_springsecurity-springboot-java-share-7452790826654425088-fZtA?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD2ZnCIBqBUWYVhf-bkzFSKE_a_141K45Ug
+- 📘 Official Spring Security OAuth2 Login Docs  
+  https://docs.spring.io/spring-security/reference/servlet/oauth2/login/index.html  
+- 📘 OpenID Connect (OIDC) Support  
+  https://docs.spring.io/spring-security/reference/servlet/oauth2/login/advanced.html#oauth2login-oidc  
+- 📘 OAuth2 Client Overview  
+  https://docs.spring.io/spring-security/reference/servlet/oauth2/index.html#oauth2-client
+- 📘 Spring Boot OAuth2 Login Guide  
+  https://spring.io/guides/tutorials/spring-boot-oauth2/  
+
+### 🔑 JWT (JSON Web Token)
+
+- 📘 JWT Introduction  
+  https://www.jwt.io/introduction#what-is-json-web-token-structure
+- 📘 RFC 7519 — JWT Standard  
+  https://datatracker.ietf.org/doc/html/rfc7519
+
+### 🔄 OAuth2 vs OIDC (Conceptual)
+
+- 📘 OAuth 2.0 Framework (RFC 6749)  
+  https://datatracker.ietf.org/doc/html/rfc6749  
+- 📘 OpenID Connect Core Spec  
+  https://openid.net/specs/openid-connect-core-1_0.html  
