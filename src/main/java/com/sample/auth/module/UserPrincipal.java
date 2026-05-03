@@ -23,7 +23,7 @@ public class UserPrincipal implements UserDetails {
 
     @Override
     public @Nullable String getPassword() {
-        return "";
+        return null;
     }
 
     @Override
