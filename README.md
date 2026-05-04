@@ -1,3 +1,12 @@
+# Spring Security OAuth2 + JWT (Minimal & Production-Ready)
+
+A clean and minimal implementation of OAuth2 login (Google) with JWT-based authentication using Spring Security.
+
+## 🚀 Features
+- OAuth2 login (Google)
+- Stateless JWT authentication
+- No session storage
+
 ## 1. Clone repository
 ```
 git clone https://github.com/JustSashaUP/oauth2-jwt
@@ -50,6 +59,13 @@ Host:
 http://localhost:8080
 ```
 ---
+## ❗ Common Issues
+
+- Filter called twice → do NOT register as @Component
+- JWT not working → check secret consistency
+- OAuth2 redirect fails → verify redirect URI
+---
+
 ## 🔗 Useful Links from me
 
 ### 🔐 Spring Security — OAuth2 / OIDC (Login Only)
