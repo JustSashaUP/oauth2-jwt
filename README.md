@@ -7,6 +7,12 @@ A clean and minimal implementation of OAuth2 login (Google) with JWT-based authe
 - Stateless JWT authentication
 - No session storage
 
+## 🔑 Authentication
+This project uses:
+- ✅ OAuth2 for authorization
+- ✅ OpenID Connect (OIDC) for user identity (Google)
+- ✅ JWT for stateless authentication
+
 ## 1. Clone repository
 ```
 git clone https://github.com/JustSashaUP/spring-oauth2-jwt-example.git
@@ -58,7 +64,6 @@ Host:
 ```
 http://localhost:8080
 ```
----
 ## ❗ Common Issues
 
 - Filter called twice → do NOT register as @Component
