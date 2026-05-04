@@ -9,8 +9,8 @@ A clean and minimal implementation of OAuth2 login (Google) with JWT-based authe
 
 ## 1. Clone repository
 ```
-git clone https://github.com/JustSashaUP/oauth2-jwt
-cd oauth2-jwt
+git clone https://github.com/JustSashaUP/spring-oauth2-jwt-example.git
+cd spring-oauth2-jwt-example
 ```
 ## 2. Create the environment file with pre-defined variables
 ```
